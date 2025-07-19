@@ -39,20 +39,21 @@ body {
     text-align: center;
 }
 
-.logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #DAA520; /* Premium Gold */
-    border: 2px solid #DAA520;
+.profile-pic-container {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1; /* Adjust for perfect vertical centering */
+    border: 2px solid #DAA520; /* Premium Gold */
     margin-bottom: 10px;
+    padding: 3px; /* Creates a small gap between the border and image */
+    background-color: #111;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
 }
 
 .name {
@@ -106,11 +107,21 @@ body {
     margin: 0;
 }
 
-.contact-info li {
+.contact-info li a {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 4px 0; /* Add some padding for easier clicking */
+    transition: color 0.3s;
+}
+
+.contact-info li a:hover span {
+    color: #DAA520;
+}
+
+.contact-info li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
 }
 
 .contact-info li:last-child {
@@ -122,11 +133,13 @@ body {
     width: 20px;
     text-align: center;
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .contact-info span {
     color: #CCCCCC;
     font-weight: 400;
+    transition: color 0.3s;
 }
 
 .footer-tagline {
